@@ -20,13 +20,13 @@ A `<LinearGradient>` element for React Native
 Using Yarn
 
 ```sh
-yarn add react-native-linear-gradient
+yarn add @gennadysx/react-native-linear-gradient
 ```
 
 Using npm
 
 ```sh
-npm install react-native-linear-gradient --save
+npm install @gennadysx/react-native-linear-gradient --save
 ```
 
 ### With React Native >= 0.60
@@ -40,7 +40,7 @@ Note: If you are using react-native version 0.60 or higher you don't need to lin
 ### Automatic
 
 ```sh
-react-native link react-native-linear-gradient
+react-native link @gennadysx/react-native-linear-gradient
 ```
 
 ### Manual
@@ -52,7 +52,7 @@ react-native link react-native-linear-gradient
   Add the following line to your Podfile:
 
   ```sh
-  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+  pod 'BVLinearGradient', :path => '../node_modules/@gennadysx/react-native-linear-gradient'
   ```
 
   Run `npx pod-install`
@@ -81,8 +81,8 @@ react-native link react-native-linear-gradient
   In `android/settings.gradle`
 
   ```groovy
-  include ':react-native-linear-gradient'
-  project(':react-native-linear-gradient').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-linear-gradient/android')
+  include ':@gennadysx/react-native-linear-gradient'
+  project(':@gennadysx/react-native-linear-gradient').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-linear-gradient/android')
   ```
 
   In `android/app/build.gradle` add:
@@ -90,7 +90,7 @@ react-native link react-native-linear-gradient
   ```groovy
   dependencies {
       ...
-      implementation project(':react-native-linear-gradient')
+      implementation project(':@gennadysx/react-native-linear-gradient')
   }
   ```
 
@@ -119,7 +119,7 @@ react-native link react-native-linear-gradient
 
   <summary>Windows (WPF)</summary>
 
-  1. in `windows/MyApp.sln` Add -> Existing Project: `node_modules/react-native-linear-gradient/windows/LinearGradientWPF/LinearGradientWPF.csproj`
+  1. in `windows/MyApp.sln` Add -> Existing Project: `node_modules/@gennadysx/react-native-linear-gradient/windows/LinearGradientWPF/LinearGradientWPF.csproj`
 
   2. in `windows/MyApp/MyAppWPF/MyAppWPF.csproj` Add -> Reference -> LinearGradientWPF
 
@@ -148,7 +148,7 @@ The following code will produce something like this:
 ![Example code result](https://raw.githubusercontent.com/react-native-community/react-native-linear-gradient/master/images/example.png)
 
 ```javascript
-import LinearGradient from 'react-native-linear-gradient';
+import LinearGradient from '@gennadysx/react-native-linear-gradient';
 
 // Within your render function
 <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}>
@@ -276,7 +276,7 @@ You can see this component in action in [brentvatne/react-native-login](https://
 ### iOS build fails: library not found, "BVLinearGradient" was not found in the UIManager
 
 1. Ensure you have followed the [installations steps](#installation) correctly. (`react-native link` for React Native < 0.60 and `npx pod-install` instead for > 0.60).
-2. Ensure `pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'` is present in your `ios/Podfile`
+2. Ensure `pod 'BVLinearGradient', :path => '../node_modules/@gennadysx/react-native-linear-gradient'` is present in your `ios/Podfile`
 3. Ensure you use `ios/**.xcworkspace` file instead of `ios./**.xcodeproj`
 
 ### Invariant Violation: Element type is invalid
@@ -285,10 +285,10 @@ Ensure you import the `LinearGradient` correctly:
 
 ```javascript
 // Like that:
-import LinearGradient from 'react-native-linear-gradient';
+import LinearGradient from '@gennadysx/react-native-linear-gradient';
 
 // Not like that:
-import { LinearGradient } from 'react-native-linear-gradient';
+import { LinearGradient } from '@gennadysx/react-native-linear-gradient';
 ```
 
 ### Other
